@@ -8,7 +8,7 @@ export function Hero() {
     <section className="relative overflow-hidden bg-[#0a2c18] text-paper">
       <div className="relative">
         <Container className="relative z-10">
-          <div className="py-12 lg:flex lg:min-h-[min(calc(100svh-8.25rem),860px)] lg:items-center lg:py-20">
+          <div className="py-12 lg:flex lg:min-h-[min(calc(100svh-8.75rem),860px)] lg:items-center lg:py-20">
             <div className="lg:w-[44%]">
               <p className="font-condensed text-[clamp(4.5rem,11vw,10.5rem)]">
                 Fresh
@@ -23,7 +23,7 @@ export function Hero() {
                 shops, supermarkets, restaurants and kitchens across the UAE.
               </h1>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
                 <Button href="/#contact" variant="leaf" size="lg">
                   Open a trade account
                 </Button>

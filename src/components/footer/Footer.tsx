@@ -20,11 +20,12 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr_1fr_1fr]">
           <div>
             <Image
-              src="/logo/amren-fresh-logo-white.svg"
+              src="/images/logo/amren-logo.svg"
               alt="AMREN Fresh"
-              width={160}
-              height={35}
+              width={1897}
+              height={632}
               unoptimized
+              className="h-20 w-auto"
             />
             <p className="mt-4 max-w-xs text-sm text-paper/65">{siteConfig.tagline}</p>
             <ContactLinks className="mt-6 max-w-xs" />

@@ -18,7 +18,7 @@ export function FaqSection() {
   };
 
   return (
-    <section id="faq" className="grain scroll-mt-18 bg-warm-white py-16 lg:py-24">
+    <section id="faq" className="grain scroll-mt-18 lg:scroll-mt-20 bg-warm-white py-16 lg:py-24">
       <Container>
         <script
           type="application/ld+json"

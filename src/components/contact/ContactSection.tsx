@@ -6,7 +6,7 @@ import { siteConfig } from "@/data/siteConfig";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="scroll-mt-18 bg-forest py-16 text-paper lg:py-24">
+    <section id="contact" className="scroll-mt-18 lg:scroll-mt-20 bg-forest py-16 text-paper lg:py-24">
       <Container>
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="flex flex-col lg:col-span-5">

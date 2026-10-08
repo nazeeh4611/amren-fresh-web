@@ -35,15 +35,16 @@ export function Header() {
         scrolled && "shadow-lifted",
       )}
     >
-      <Container className="flex h-18 items-center justify-between">
+      <Container className="flex h-18 items-center justify-between gap-6 lg:h-20">
         <Link href="/" aria-label="AMREN Fresh home">
           <Image
-            src="/logo/amren-fresh-logo-white.svg"
+            src="/images/logo/amren-logo.svg"
             alt="AMREN Fresh"
-            width={160}
-            height={35}
+            width={1897}
+            height={632}
             priority
             unoptimized
+            className="h-14 w-auto sm:h-16 lg:h-[72px]"
           />
         </Link>
 

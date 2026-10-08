@@ -5,6 +5,7 @@ import { buildMetadata, defaultTitle } from "@/lib/seo";
 import { siteConfig, toWhatsAppHref } from "@/data/siteConfig";
 import { Header } from "@/components/navigation/Header";
 import { Footer } from "@/components/footer/Footer";
+import { FloatingContact } from "@/components/contact/FloatingContact";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -111,6 +112,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <FloatingContact />
       </body>
     </html>
   );

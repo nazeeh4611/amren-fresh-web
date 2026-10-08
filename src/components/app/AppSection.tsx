@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StoreBadges } from "@/components/app/StoreBadges";
+import { SwipeHint } from "@/components/ui/SwipeHint";
 import { appFeatureDetails } from "@/data/appFeatureDetails";
 import { appLanguages, easeOfUseTraits, howItWorksSteps, invoiceFeatures } from "@/data/appFeatures";
 
@@ -9,7 +10,7 @@ const listFormat = new Intl.ListFormat("en", { type: "conjunction" });
 
 export function AppSection() {
   return (
-    <section id="app" className="scroll-mt-18 overflow-hidden bg-lime py-16 text-forest-darker lg:py-24">
+    <section id="app" className="scroll-mt-18 lg:scroll-mt-20 overflow-hidden bg-lime py-16 text-forest-darker lg:py-24">
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-6">
@@ -50,11 +51,18 @@ export function AppSection() {
           </div>
         </div>
 
-        <ol id="how-it-works" className="mt-20 grid scroll-mt-24 border-t-2 border-forest-darker sm:grid-cols-2 lg:grid-cols-4">
+        <SwipeHint className="mt-16 text-forest-darker/60 sm:hidden" />
+
+        <ol
+          id="how-it-works"
+          tabIndex={0}
+          aria-label="How ordering works"
+          className="no-scrollbar -mx-6 mt-4 flex snap-x snap-mandatory scroll-px-6 scroll-mt-24 gap-3 overflow-x-auto px-6 pb-2 sm:mx-0 sm:mt-20 sm:grid sm:grid-cols-2 sm:gap-0 sm:overflow-visible sm:border-t-2 sm:border-forest-darker sm:px-0 sm:pb-0 lg:grid-cols-4"
+        >
           {howItWorksSteps.map((step, i) => (
             <li
               key={step.step}
-              className="border-b border-forest-darker/25 py-6 sm:pr-6 lg:border-b-0 lg:border-r lg:px-6 lg:first:pl-0 lg:last:border-r-0"
+              className="w-[70%] shrink-0 snap-start border-t-2 border-forest-darker bg-lime-light/40 p-5 sm:w-auto sm:border-t-0 sm:border-b sm:border-forest-darker/25 sm:bg-transparent sm:px-0 sm:py-6 sm:pr-6 lg:border-b-0 lg:border-r lg:px-6 lg:first:pl-0 lg:last:border-r-0"
             >
               <span className="font-condensed text-6xl">{i + 1}</span>
               <h3 className="mt-3 text-lg font-bold">{step.title}</h3>
@@ -66,9 +74,13 @@ export function AppSection() {
         <div className="mt-14 grid gap-10 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-7">
             <h3 className="font-mono text-xs uppercase">What the app does</h3>
-            <dl className="mt-5 grid gap-x-10 gap-y-6 sm:grid-cols-2">
+            <dl
+              tabIndex={0}
+              aria-label="App features"
+              className="no-scrollbar -mx-6 mt-5 flex snap-x snap-mandatory scroll-px-6 gap-3 overflow-x-auto px-6 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-x-10 sm:gap-y-6 sm:overflow-visible sm:px-0 sm:pb-0"
+            >
               {appFeatureDetails.map((feature) => (
-                <div key={feature.title} className="border-t border-forest-darker/25 pt-3">
+                <div key={feature.title} className="w-[75%] shrink-0 snap-start border-t-2 border-forest-darker bg-lime-light/40 p-4 sm:w-auto sm:border-t sm:border-forest-darker/25 sm:bg-transparent sm:p-0 sm:pt-3">
                   <dt className="font-bold">{feature.title}</dt>
                   <dd className="mt-1 text-sm leading-relaxed text-forest-darker/75">{feature.description}</dd>
                 </div>

@@ -4,7 +4,7 @@ import { businessAudiences } from "@/data/products";
 
 export function SupplySection() {
   return (
-    <section id="b2b-supply" className="scroll-mt-18 bg-forest py-16 text-paper lg:py-24">
+    <section id="b2b-supply" className="scroll-mt-18 lg:scroll-mt-20 bg-forest py-16 text-paper lg:py-24">
       <Container>
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-4">
@@ -16,9 +16,9 @@ export function SupplySection() {
             </p>
           </div>
 
-          <ul className="flex flex-wrap items-baseline gap-x-4 gap-y-1 font-condensed text-5xl sm:text-6xl lg:col-span-8 lg:text-7xl">
+          <ul className="flex min-w-0 flex-wrap items-baseline gap-x-3 gap-y-1 font-condensed text-[clamp(2.25rem,12vw,3rem)] sm:gap-x-4 sm:text-6xl lg:col-span-8 lg:text-7xl">
             {businessAudiences.map((audience, i) => (
-              <li key={audience} className="flex items-baseline gap-4">
+              <li key={audience} className="flex items-baseline gap-3 sm:gap-4">
                 <span className={i % 2 === 0 ? "text-paper" : "text-paper/45"}>{audience}</span>
                 {i < businessAudiences.length - 1 && (
                   <span className="text-lime" aria-hidden="true">

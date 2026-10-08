@@ -13,7 +13,7 @@ export function LegalPage({
   return (
     <main id="main-content" className="bg-warm-white py-20 lg:py-28">
       <Container className="max-w-3xl">
-        <Link href="/" className="text-sm font-medium text-forest hover:underline">
+        <Link href="/" className="-my-2 inline-block py-2 text-sm font-medium text-forest hover:underline">
           ← Back to AMREN Fresh
         </Link>
 

@@ -12,10 +12,10 @@ type ButtonProps = {
 };
 
 const variantClasses: Record<NonNullable<ButtonProps["variant"]>, string> = {
-  primary: "bg-forest text-paper hover:bg-forest-darker",
+  primary: "border border-forest bg-forest text-paper hover:border-forest-darker hover:bg-forest-darker",
   secondary: "border border-ink/80 text-ink hover:bg-ink hover:text-paper",
   ghost: "border border-paper/30 text-paper hover:border-paper",
-  leaf: "bg-lime text-forest-darker hover:bg-lime-light",
+  leaf: "border border-lime bg-lime text-forest-darker hover:border-lime-light hover:bg-lime-light",
 };
 
 export function Button({

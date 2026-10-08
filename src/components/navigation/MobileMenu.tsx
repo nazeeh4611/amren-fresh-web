@@ -10,7 +10,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
     <div
       id="mobile-menu"
       className={cn(
-        "fixed inset-0 top-18 z-40 bg-forest-darker transition-transform duration-300 lg:hidden",
+        "fixed inset-0 top-18 lg:top-20 z-40 bg-forest-darker transition-transform duration-300 lg:hidden",
         open ? "visible translate-x-0" : "invisible translate-x-full",
       )}
       aria-hidden={!open}
