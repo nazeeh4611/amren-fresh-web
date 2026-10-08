@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --color-warm-white: #f2efe6;
+  --color-ivory: #e9e5d8;
+  --color-cream: #d9d3c2;
+  --color-paper: #f7f5ef;
+
+  --color-forest: #134a2c;
+  --color-forest-deep: #0e3a22;
+  --color-forest-darker: #0a2918;
+
+  --color-leaf: #3f7a1d;
+  --color-lime: #c8f169;
+  --color-lime-light: #dcf79c;
+
+  --color-green: #2f7a35;
+  --color-tomato: #e0502a;
+
+  --color-ink: #10180f;
+  --color-muted: #5b6157;
+
+  --font-sans: var(--font-archivo), "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-archivo), "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), "JetBrains Mono", ui-monospace, monospace;
+
+  --shadow-soft: 0 1px 2px rgba(10, 41, 24, 0.05), 0 8px 24px rgba(10, 41, 24, 0.08);
+  --shadow-lifted: 0 4px 8px rgba(10, 41, 24, 0.08), 0 30px 60px rgba(10, 41, 24, 0.25);
+  --shadow-header: 0 1px 0 rgba(16, 24, 15, 0.08);
+
+  --radius-card: 4px;
+  --radius-card-lg: 6px;
+
+  --animate-marquee: marquee 60s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* Crate-stamp display type: Archivo pulled to its narrowest width. */
+@utility font-condensed {
+  font-family: var(--font-display);
+  font-stretch: 62%;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 0.88;
+}
+
+/* Fine paper grain laid over light sections. */
+@utility grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+html {
+  overflow-x: clip;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--color-warm-white);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-lime);
+  color: var(--color-forest-darker);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-forest);
+  outline-offset: 3px;
+}
