@@ -62,7 +62,7 @@ export function StoreBadges({ className }: { className?: string }) {
         return (
           <a
             key={store.name}
-            href={configured ? store.url : "#app"}
+            href={configured ? store.url : "/#app"}
             {...(configured && { target: "_blank", rel: "noopener noreferrer" })}
             aria-label={`Get AMREN Fresh on ${store.name}`}
             className="inline-flex h-[52px] items-center gap-2.5 rounded-[10px] border border-white/25 bg-black pl-3.5 pr-5 text-white transition-colors hover:bg-neutral-800"

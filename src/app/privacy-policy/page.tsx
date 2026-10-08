@@ -5,7 +5,8 @@ import { siteConfig, isConfigured } from "@/data/siteConfig";
 
 export const metadata: Metadata = buildMetadata({
   title: "Privacy Policy",
-  alternates: { canonical: `${siteConfig.domain}/privacy-policy` },
+  description: "How AMREN Fresh collects, uses and protects information from the website, contact enquiries and the AMREN Fresh ordering app.",
+  path: "/privacy-policy",
 });
 
 export default function PrivacyPolicyPage() {
@@ -19,7 +20,7 @@ export default function PrivacyPolicyPage() {
 
       <h2>Information We Collect</h2>
       <ul>
-        <li>Business inquiry details you submit through the contact form, such as name, business name, phone, email, city, business type and message.</li>
+        <li>Business enquiry details you send us by email, phone or WhatsApp, including enquiries prepared with the contact form on the Website, such as name, business name, phone, email, city, business type and message.</li>
         <li>Account details used to access the App, such as Shop ID and PIN, provided when a business account is set up.</li>
         <li>Order, quantity, unit and invoice information generated when you place orders through the App.</li>
         <li>Standard technical information such as browser type and device information, collected automatically when you use the Website.</li>
@@ -27,7 +28,7 @@ export default function PrivacyPolicyPage() {
 
       <h2>How We Use Information</h2>
       <ul>
-        <li>To respond to business inquiries submitted through the Website.</li>
+        <li>To respond to business enquiries.</li>
         <li>To provide access to the App and process orders and invoices.</li>
         <li>To maintain order history and invoice records for your business account.</li>
         <li>To operate, maintain and improve the Website and App.</li>

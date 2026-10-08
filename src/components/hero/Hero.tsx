@@ -10,24 +10,24 @@ export function Hero() {
         <Container className="relative z-10">
           <div className="py-12 lg:flex lg:min-h-[min(calc(100svh-8.25rem),860px)] lg:items-center lg:py-20">
             <div className="lg:w-[44%]">
-              <h1 className="font-condensed text-[clamp(4.5rem,11vw,10.5rem)]">
+              <p className="font-condensed text-[clamp(4.5rem,11vw,10.5rem)]">
                 Fresh
                 <br />
                 by the
                 <br />
                 <span className="text-lime">box.</span>
-              </h1>
-
-              <p className="mt-10 max-w-md text-lg leading-relaxed text-paper/80">
-                Fruits, vegetables, prepared produce and plastic products for shops,
-                supermarkets, restaurants and kitchens across the UAE.
               </p>
 
+              <h1 className="mt-10 max-w-md text-lg font-normal leading-relaxed text-paper/80">
+                Wholesale fruits, vegetables, prepared produce and plastic products for
+                shops, supermarkets, restaurants and kitchens across the UAE.
+              </h1>
+
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button href="#contact" variant="leaf" size="lg">
+                <Button href="/#contact" variant="leaf" size="lg">
                   Open a trade account
                 </Button>
-                <Button href="#products" variant="ghost" size="lg">
+                <Button href="/#products" variant="ghost" size="lg">
                   See the range
                 </Button>
               </div>

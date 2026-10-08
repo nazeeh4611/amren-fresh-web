@@ -1,23 +1,10 @@
 import { Container } from "@/components/ui/Container";
 import { StoreBadges } from "@/components/app/StoreBadges";
 import { ContactForm } from "@/components/contact/ContactForm";
-import { siteConfig, isConfigured } from "@/data/siteConfig";
+import { ContactLinks } from "@/components/contact/ContactLinks";
+import { siteConfig } from "@/data/siteConfig";
 
 export function ContactSection() {
-  const details = [
-    { label: "Location", value: `${siteConfig.city}, ${siteConfig.country}` },
-    isConfigured(siteConfig.CONTACT_EMAIL) && {
-      label: "Email",
-      value: siteConfig.CONTACT_EMAIL,
-      href: `mailto:${siteConfig.CONTACT_EMAIL}`,
-    },
-    isConfigured(siteConfig.CONTACT_PHONE) && {
-      label: "Phone",
-      value: siteConfig.CONTACT_PHONE,
-      href: `tel:${siteConfig.CONTACT_PHONE}`,
-    },
-  ].filter(Boolean) as { label: string; value: string; href?: string }[];
-
   return (
     <section id="contact" className="scroll-mt-18 bg-forest py-16 text-paper lg:py-24">
       <Container>
@@ -33,22 +20,10 @@ export function ContactSection() {
               to discuss supply and set up your account.
             </p>
 
-            <dl className="mt-10 border-t border-paper/15">
-              {details.map((detail) => (
-                <div key={detail.label} className="flex justify-between gap-6 border-b border-paper/15 py-3">
-                  <dt className="font-mono text-xs uppercase text-paper/55">{detail.label}</dt>
-                  <dd className="text-sm">
-                    {detail.href ? (
-                      <a href={detail.href} className="hover:text-lime">
-                        {detail.value}
-                      </a>
-                    ) : (
-                      detail.value
-                    )}
-                  </dd>
-                </div>
-              ))}
-            </dl>
+            <ContactLinks className="mt-10" />
+            <p className="mt-3 font-mono text-xs uppercase text-paper/55">
+              {siteConfig.city}, {siteConfig.country}
+            </p>
 
             <div className="mt-10 lg:mt-auto lg:pt-10">
               <p className="text-sm text-paper/75">

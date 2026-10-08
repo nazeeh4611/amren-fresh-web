@@ -11,9 +11,9 @@ export function LegalPage({
   children: React.ReactNode;
 }) {
   return (
-    <main className="bg-warm-white py-20 lg:py-28">
+    <main id="main-content" className="bg-warm-white py-20 lg:py-28">
       <Container className="max-w-3xl">
-        <Link href="/#top" className="text-sm font-medium text-forest hover:underline">
+        <Link href="/" className="text-sm font-medium text-forest hover:underline">
           ← Back to AMREN Fresh
         </Link>
 

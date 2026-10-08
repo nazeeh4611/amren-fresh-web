@@ -5,7 +5,8 @@ import { siteConfig } from "@/data/siteConfig";
 
 export const metadata: Metadata = buildMetadata({
   title: "Terms & Conditions",
-  alternates: { canonical: `${siteConfig.domain}/terms-and-conditions` },
+  description: "Terms and conditions for using the AMREN Fresh website and the AMREN Fresh wholesale ordering app in the UAE.",
+  path: "/terms-and-conditions",
 });
 
 export default function TermsPage() {

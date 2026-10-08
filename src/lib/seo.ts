@@ -6,54 +6,70 @@ export const defaultTitle =
 
 export const defaultDescription = siteConfig.description;
 
-export function buildMetadata(overrides: Partial<Metadata> = {}): Metadata {
+const keywords = [
+  "fresh fruits supplier UAE",
+  "fresh vegetables supplier UAE",
+  "fresh produce supplier UAE",
+  "fruit wholesale UAE",
+  "vegetable wholesale UAE",
+  "fresh fruits wholesale UAE",
+  "fresh vegetables wholesale UAE",
+  "fruit supplier Dubai",
+  "vegetable supplier Dubai",
+  "B2B fruit supplier UAE",
+  "B2B vegetable supplier UAE",
+  "wholesale fruits Dubai",
+  "wholesale vegetables Dubai",
+  "cut fruits supplier UAE",
+  "cut vegetables supplier UAE",
+  "ready to cook vegetables UAE",
+  "plastic products supplier UAE",
+  "restaurant produce supplier Dubai",
+  "supermarket produce supplier UAE",
+  "AMREN Fresh app",
+];
+
+/**
+ * Builds page metadata with a correct canonical URL and matching Open Graph /
+ * Twitter tags. Pass `path` (e.g. "/privacy-policy") for every page other than
+ * the home page.
+ */
+export function buildMetadata({
+  title,
+  description = defaultDescription,
+  path = "/",
+}: {
+  title?: string;
+  description?: string;
+  path?: string;
+} = {}): Metadata {
+  const url = new URL(path, siteConfig.url).toString();
+  const fullTitle = title ? `${title} | ${siteConfig.name}` : defaultTitle;
+
   return {
     metadataBase: new URL(siteConfig.domain),
-    title: {
-      default: defaultTitle,
-      template: `%s | ${siteConfig.name}`,
-    },
-    description: defaultDescription,
-    keywords: [
-      "fresh fruits supplier UAE",
-      "fresh vegetables supplier UAE",
-      "fresh produce supplier UAE",
-      "fruit wholesale UAE",
-      "vegetable wholesale UAE",
-      "fresh fruits wholesale UAE",
-      "fresh vegetables wholesale UAE",
-      "fruit supplier Dubai",
-      "vegetable supplier Dubai",
-      "B2B fruit supplier UAE",
-      "B2B vegetable supplier UAE",
-      "wholesale fruits Dubai",
-      "wholesale vegetables Dubai",
-      "plastic products supplier UAE",
-      "AMREN Fresh app",
-    ],
-    alternates: {
-      canonical: siteConfig.url,
-    },
+    title: title ?? { absolute: defaultTitle },
+    description,
+    keywords,
+    applicationName: siteConfig.name,
+    authors: [{ name: siteConfig.legalName, url: siteConfig.url }],
+    creator: siteConfig.legalName,
+    publisher: siteConfig.legalName,
+    category: "Wholesale food supply",
+    alternates: { canonical: url },
+    formatDetection: { telephone: true, email: true, address: false },
     openGraph: {
       type: "website",
-      url: siteConfig.url,
+      url,
       siteName: siteConfig.name,
-      title: defaultTitle,
-      description: defaultDescription,
+      title: fullTitle,
+      description,
       locale: siteConfig.locale,
-      images: [
-        {
-          url: "/opengraph-image",
-          width: 1200,
-          height: 630,
-          alt: "AMREN Fresh | Fresh produce supply across the UAE",
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
-      title: defaultTitle,
-      description: defaultDescription,
+      title: fullTitle,
+      description,
       images: ["/opengraph-image"],
     },
     robots: {
@@ -67,6 +83,5 @@ export function buildMetadata(overrides: Partial<Metadata> = {}): Metadata {
         "max-video-preview": -1,
       },
     },
-    ...overrides,
   };
 }

@@ -5,7 +5,8 @@ import { siteConfig } from "@/data/siteConfig";
 
 export const metadata: Metadata = buildMetadata({
   title: "Cookie Policy",
-  alternates: { canonical: `${siteConfig.domain}/cookie-policy` },
+  description: "How the AMREN Fresh website uses cookies and similar technologies.",
+  path: "/cookie-policy",
 });
 
 export default function CookiePolicyPage() {

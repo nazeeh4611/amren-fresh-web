@@ -29,7 +29,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
             </li>
           ))}
         </ul>
-        <Button href="#contact" variant="leaf" size="lg" className="w-full">
+        <Button href="/#contact" variant="leaf" size="lg" className="w-full">
           Contact us
         </Button>
       </nav>

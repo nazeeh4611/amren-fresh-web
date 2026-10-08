@@ -4,6 +4,7 @@ import { footerNav, legalNav } from "@/data/navigation";
 import { siteConfig, isConfigured } from "@/data/siteConfig";
 import { StoreBadges } from "@/components/app/StoreBadges";
 import { Container } from "@/components/ui/Container";
+import { ContactLinks } from "@/components/contact/ContactLinks";
 
 const socialLinks = [
   { label: "Instagram", url: siteConfig.INSTAGRAM_URL },
@@ -26,6 +27,7 @@ export function Footer() {
               unoptimized
             />
             <p className="mt-4 max-w-xs text-sm text-paper/65">{siteConfig.tagline}</p>
+            <ContactLinks className="mt-6 max-w-xs" />
 
             {socialLinks.length > 0 && (
               <div className="mt-6 flex gap-3">

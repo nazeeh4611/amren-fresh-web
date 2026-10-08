@@ -36,7 +36,7 @@ export function Header() {
       )}
     >
       <Container className="flex h-18 items-center justify-between">
-        <Link href="#top" aria-label="AMREN Fresh home">
+        <Link href="/" aria-label="AMREN Fresh home">
           <Image
             src="/logo/amren-fresh-logo-white.svg"
             alt="AMREN Fresh"
@@ -63,7 +63,7 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="#contact" variant="leaf">
+          <Button href="/#contact" variant="leaf">
             Contact us
           </Button>
         </div>
