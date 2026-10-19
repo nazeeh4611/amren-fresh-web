@@ -81,6 +81,12 @@ export function Footer() {
 
         <div className="mt-12 flex flex-wrap justify-between gap-2 border-t border-paper/10 pt-6 font-mono text-[11px] uppercase text-paper/45">
           <span>© {new Date().getFullYear()} AMREN Fresh. All rights reserved.</span>
+          <span>
+            Part of{" "}
+            <a href="https://amren.ae/" className="underline underline-offset-4 hover:text-paper">
+              AMREN Ventures
+            </a>
+          </span>
           <span>{siteConfig.city}, {siteConfig.country}</span>
         </div>
       </Container>

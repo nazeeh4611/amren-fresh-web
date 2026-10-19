@@ -49,6 +49,7 @@ export default function RootLayout({
         description: siteConfig.description,
         email: siteConfig.CONTACT_EMAIL,
         telephone: siteConfig.CONTACT_PHONES[0],
+        parentOrganization: { "@type": "Organization", name: "AMREN Ventures", url: "https://amren.ae/" },
         areaServed: { "@type": "Country", name: "United Arab Emirates" },
         address: {
           "@type": "PostalAddress",
